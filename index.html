@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" 
+          content="DDH, venta de Accesorios de computadoras, creado para desmotración de aprendizaje.">
+    <meta name="keywords" content="javascript, js, Accesorios, css, html, venta, moda, estilo">
+    <meta name="author" content="Davila Huaman Denis">
+
+    <!-- css -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- icononos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="icons/all.min.css">
+
+    <link rel="preload" href="main.js" as="script">
+
+    <link rel="preload" href="img/mascara.png" as="image">
+
+    <link rel="apple-touch-icon" href="img/logoS.png">
+
+    <link rel="shortcut icon" href="img/logoS.png" type="image/x-icon">
+
+    <link rel="preload" href="img/loader.gif" as="image">
+
+    <title>SHIPLAY</title>
+</head>
+<body>
+    <!--===== loader =====-->
+    <div class="loader">
+        <img class="loader__gif" src="img/loader.gif" alt="loader">
+    </div>
+
+    <!--===== header =====-->
+    <header class="header">
+        <div class="header__contenedor max-width">
+            <div class="navegacion">
+                <a href="#inicio" class="navegacion__logo"><img class="navegacion__ico" src="img/WS.png" alt="NO HAY WEY"></a>
+                <ul class="navegacion__lista">
+                    <i class='bx bx-x navegacion__close'></i>
+                    <li class="navegacion__item"><a class="navegacion__link active" href="#inicio">Inicio</a></li>
+                    <li class="navegacion__item"><a class="navegacion__link" href="#historia">Empresa</a></li>
+                    <li class="navegacion__item"><a class="navegacion__link" href="#productos">Productos</a>
+                        <ul>
+                            <li class="navegacion__item"><a class="navegacion__link" href="#destacados">Descatados</a></li>
+                            <li class="navegacion__item"><a class="navegacion__link" href="#nuevo">Nuevo</a></li>
+                        </ul>
+                    </li>
+                    <li class="navegacion__item"><a class="navegacion__link" href="#contactanos">Contactanos</a></li>
+                </ul>
+            </div>
+            <div class="iconos">
+                <div class="iconos__contenedor">
+                    <a href="registro.html" class="navegacion__link"><i style="font-size: 20px;" class='fa-solid fa-truck-fast'></i></a>
+                    <div class="iconos__modo iconos__ico">
+                        <i class='bx bx-moon iconos__oscuro'></i>
+                        <i class='bx bx-sun  iconos__claro'></i>
+                    </div>
+                    <i class='bx bx-cart iconos__ico iconos__carrito'><span class="header__indice"></span></i>
+                    <i class='bx bx-menu iconos__ico iconos__menu' ></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--===== carrito =====-->
+    <section class="carrito">
+        <div class="carrito__top">
+            <p class="carrito__vaciar">vaciar</p>
+            <h2 class="carrito__title">Mi Carrito</h2>
+            <i class='bx bx-x carrito__close'></i>
+        </div>
+        <div class="carrito__cards">
+            <!--  -->
+        </div>
+        <div class="carrito__bottom">
+            <p class="carrito__cantidad"><span class="cantidad__producto">0</span> Productos</p>
+            <p class="carrito__total">Total: <span class="carrito__color">S/.<span class="cantidad__total">0.00</span></span> <button  onclick="location.href='registro.html'" class="botonPagar">Pagar</button> </p>
+        </div>
+    </section>
+
+    <!--===== producto exitosamente notificacion =====-->
+    <div class="agregadoExitosamente">PRODUCTO AGREGADO</div>
+
+    <main class="contenedor max-width">
+        <!--===== inicio =====-->
+        <section class="inicio" id="inicio">
+            <div class="inicio__presentacion">
+                <img class="displayImagen" src="img/mascara.png" alt="imagen">
+                <h1 class="inicio__title destacados__title">NUEVAS COLECCIONES MASCARA - CYBER PUNK LED</h1>
+                <p class="inicio__parrafo">
+                    Última llegada de los màs nuevos y novedosos Accesorios
+                    con un diseño moderno y resistente.
+                </p>
+                <p class="precio__naranja">S/.<span class="inicio__precio">1200</span></p>
+                <a id="open-popup" class="inicio__linkDescubrir" href="#">Detalles</a>
+                <button class="inicio__boton agregar" data-id="16">Añadir Al carrito</button>
+                <div class="inicio__redes">
+                    <a class="inicio__link" href="https://www.facebook.com/DDH.30/" target="_blank">Facebook</a>
+                    <a class="inicio__link" href="https://www.instagram.com/davila._.30/" target="_blank">Instagram</a>
+                    <a class="inicio__link" href="https://web.whatsapp.com/" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            <div class="inicio__imagen">
+                <img class="inicio__img" src="img/mascara.png" alt="home">
+            </div>
+        </section>
+         <!--===== Descripcioines =====-->
+        <div class="popup">
+            <div class="close-btn">&times;</div>
+            <h1>NUEVAS COLECCIONES MASCARA - CYBER PUNK LED</h1>
+            <div class="des__img"><img style="width: 50%;" src="img/mascara.png" alt="">
+                <p>Máscara de casco con luces LED para hombre, máscara de cara completa con luces LED, estilo Punk, Techwear, Estilo Moderno, Cosplay</p>
+            </div>
+        </div>
+        <!--===== destacados =====-->
+        <section class="destacados" id="destacados">
+            <h1 class="titulo">Destacados</h1>
+            <div class="destacados__contenedor">
+                <div class="destacados__columna">
+                    <p class="destacados__rebaja">Rebaja</p>
+                    <p class="boto"><i class="fa-brands fa-readme bot"></i></p>
+                    <img class="destacados__img" src="img/parlante2.png" alt="producto">
+                    <h3 class="destacados__title">GRAVASTAR VENUS PARLANTES</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">540</span></p>
+                    <button class="inicio__boton inicio__boton--ocultar agregar" data-id="1">Añadir Al carrito</button>
+                </div>
+                <div class="destacados__columna">
+                    <p class="destacados__rebaja">Rebaja</p>
+                    <p class="boto"><i class="fa-brands fa-readme bot"></i></p>
+                    <img class="destacados__img" src="img/maus.png" alt="producto">
+                    <h3 class="destacados__title">RAZER VIPER CYBERPUNK</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">240</span></p>
+                    <button class="inicio__boton inicio__boton--ocultar agregar" data-id="2">Añadir Al carrito</button>
+                </div>
+                <div class="destacados__columna">
+                    <p class="destacados__rebaja">Rebaja</p>
+                    <p class="boto"><i class="fa-brands fa-readme bot"></i></p> 
+                    <img class="destacados__img" src="img/silla.png" alt="producto">
+                    <h3 class="destacados__title">LIT NITRO SILLA GAMER</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">535</span></p>
+                    <button class="inicio__boton inicio__boton--ocultar agregar" data-id="3">Añadir Al carrito</button>
+                </div>
+            </div>
+            <section id="historia" >
+                <div class="historia">
+                    <div class="historia__imagen">
+                        <img class="historia__img" src="img/history.jpg" alt="image">
+                    </div>
+                    <div class="historia__info">
+                        <h1 class="titulo titulo--margin">Nuestra historia</h1>
+                        <h2 class="inicio__title">¿Quienes Somos?</h2>
+                        <p class="inicio__parrafo">
+                            Esta es un Empresa de Venta Online, todo comenzo con una idea basica de vender de forma segura debido a la pandemia
+                            es por ello que surgio DDH una empresa de ventas de Accesorios, DDH, son iniciales del Director de desarrollo y
+                            acargo de dirigir todo la empresa, Denis Davila Huaman es el hombre que logro todo esto desde cero. <br> Nos Ubicamos en Perú
+                            en el departamento de Piura.
+                        </p>
+                        <h1>Misión</h1>
+                        <p>
+                            Con DDH, el mundo del retail es alcanzable a todos en Latinoamérica independientemente de dónde vivas, con la
+                            posibilidad de comprar cualquier producto.
+                        </p>
+                        <br>
+                        <h1>Visión</h1>
+                        <p>
+                            En DDH Encontrarás Lo Mejor en Tecnología, Moda,Hogar y Más. Contamos con Envíos
+                            Gratis* y Devoluciones sin Costo. Seguridad en tu Compra ¡Entra Ya!. Varios Medios De Pago.
+                            Suscripción A Newsletter.
+                        </p>
+                        <br>
+                        <button class="inicio__boton inicio__boton--margin">Descubrir</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!--===== productos =====-->
+        <section class="productos" id="productos">
+            <h1 class="titulo">Productos</h1>
+            <div class="productos__contenedor">
+                <div class="productos__columna">
+                    <img class="productos__img" src="img/p1.png" alt="imagen">
+                    <h3 class="destacados__title">MICROFONO PRO</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">339</span></p>
+                    <i class="bx bx-shopping-bag productos__ico agregar" data-id="4"></i>
+                </div>
+                <div class="productos__columna">
+                    <img class="productos__img" src="img/p8.png" alt="imagen">
+                    <br><br>
+                    <h3 class="destacados__title">AUDIFONOS ESTÉREO INALAMBRICO CON MICROFONO DESMONTABLE</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">129</span></p>
+                    <i class="bx bx-shopping-bag productos__ico agregar" data-id="5"></i>
+                </div>
+                <div class="productos__columna">
+                    <img class="productos__img" src="img/p9.png" alt="imagen">
+                    <h3 class="destacados__title">PARLANTE GAMER</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">435</span></p>
+                    <i class="bx bx-shopping-bag productos__ico agregar" data-id="6"></i>
+                </div>
+                <div class="productos__columna">
+                    <img class="productos__img" src="img/p10.png" alt="imagen">
+                    <br><br>
+                    <h3 class="destacados__title">OBSBOT TINY 4K CAMARA</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">549</span></p>
+                    <i class="bx bx-shopping-bag productos__ico agregar" data-id="7"></i>
+                </div>
+                <div class="productos__columna">
+                    <img class="productos__img" src="img/p11.png" alt="imagen">
+                    <h3 class="destacados__title">ARES BLANCA RGB</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">690</span></p>
+                    <i class="bx bx-shopping-bag productos__ico agregar" data-id="8"></i>
+                </div>
+                <div class="productos__columna">
+                    <img class="productos__img" src="img/p12.png" alt="imagen">
+                    <h3 class="destacados__title">SPORTING M838 MOUSE</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">68</span></p>
+                    <i class="bx bx-shopping-bag productos__ico agregar" data-id="9"></i>
+                </div>
+            </div>
+        </section>
+
+        <!--===== nuevo =====-->
+        <section class="nuevo" id="nuevo">
+            <h1 class="titulo">Los recien llegados</h1>
+            <div class="productos__contenedor">
+                <div class="productos__columna productos__columna--nuevo">
+                    <img class="productos__img" src="img/p3.png" alt="imagen">
+                    <h3 class="destacados__title">KAKASHI</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">229</span></p>
+                    <p class="nuevo__new">nuevo</p>
+                    <button class="inicio__boton  inicio__boton--color agregar" data-id="10">agregar</button>
+                    
+                </div>
+                <div class="productos__columna productos__columna--nuevo">
+                    <img class="productos__img" src="img/tarj.png" alt="imagen">
+                    <br>
+                    <h3 class="destacados__title">TARJETA GRAFICA</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">962</span></p>
+                    <p class="nuevo__new">nuevo</p>
+                    <button class="inicio__boton inicio__boton--color agregar" data-id="11">agregar</button>
+                    
+                </div>
+                <div class="productos__columna productos__columna--nuevo">
+                    <img class="productos__img" src="img/audiofonos.png" alt="imagen">
+                    <br>
+                    <h3 class="destacados__title">AURICULAR GAMER - GATO</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">110</span></p>
+                    <p class="nuevo__new">nuevo</p>
+                    <button class="inicio__boton inicio__boton--color agregar" data-id="12">agregar</button>
+                    
+                </div>
+                <div class="productos__columna productos__columna--nuevo">
+                    <img class="productos__img" src="img/P5.png" alt="imagen">
+                    <h3 class="destacados__title">CPU GAMER</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">5599</span></p>
+                    <p class="nuevo__new">nuevo</p>
+                    <button class="inicio__boton inicio__boton--color agregar" data-id="13">agregar</button>
+                    
+                </div>
+                <div class="productos__columna productos__columna--nuevo">
+                    <img class="productos__img" src="img/p4.png" alt="imagen">
+                    <br><br><br>
+                    <h3 class="destacados__title">ONE PIECE - LUFFY</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">120</span></p>
+                    <p class="nuevo__new">nuevo</p>
+                    <button class="inicio__boton inicio__boton--color agregar" data-id="14">agregar</button>
+                    
+                </div>
+                <div class="productos__columna productos__columna--nuevo">
+                    <img class="productos__img" src="img/p7.png" alt="imagen">
+                    <h3 class="destacados__title">REDRAGON DITI K585RGB</h3>
+                    <p class="precio__naranja inicio__precio--tamaño">S/.<span class="inicio__precio">1899</span></p>
+                    <p class="nuevo__new">nuevo</p>
+                    <button class="inicio__boton inicio__boton--color agregar" data-id="15">agregar</button>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!--===== contacto =====-->
+        <section class="contacto">
+            <div class="contacto__informacion">
+                <h1 class="contacto__title">Suscríbete a nuestro boletín</h1>
+                <p>
+                    No te pierdas sus descuentos. Suscríbase a nuestro 
+                    boletín de correo electrónico para obtener las mejores ofertas, 
+                    descuentos, cupones, regalos y mucho más.
+                </p>
+            </div>
+            <div class="contacto__formulario">
+                <form class="contacto__form">
+                    <input class="contacto__input" type="email" placeholder="Introduce tu correo electronico" required>
+                    <button class="inicio__boton inicio__boton--tamaño">Suscribir</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--===== SCROLL UP =====-->
+    <a href="#inicio" class="scrollup" id="scroll-up"> 
+        <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+    </a>
+
+    <!--===== footer =====-->
+    <section id='contactanos'>
+        <footer class="footer max-width">
+            <div class="footer__contenedor">
+                <ul class="footer__columna">
+                    <h2 class="footer__title">MI INFORMACION</h2>
+                    <li class="footer__item">PERÚ - 2022</li>
+                    <li class="footer__item">Piura</li>
+                    <li class="footer__item">ISA</li>
+                    <li class="footer__item">Universitario</li>
+                    <li class="footer__item">Desarrollador de Sistemas</li>
+                    <li class="footer__item">Edicion de AudioVideos y imagenes</li>
+                    <li class="footer__item">Creador de Contenido</li>
+                    <li class="footer__item">Mecanico</li>
+                    <li class="footer__item"><a class="footer__link" href="tel:123-456-789">XXX-570-081</a></li>
+                </ul>
+                <ul class="footer__columna">
+                    <h2 class="footer__title">ACERCA DE DDH</h2>
+                    <li class="footer__item"><a class="footer__link" href="#">Historia</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Ayuda</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Condiciones de Entrega</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Envio en 24 horas</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Directorio</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Programas de Lealtad</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Vuelvete un Afiliado</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Legales</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Login</a></li>
+                </ul>
+                <ul class="footer__columna">
+                    <h2 class="footer__title">SERVICIO AL CLIENTE</h2>
+                    <li class="footer__item"><a class="footer__link" href="#">Preguntas Frecuentes</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Contacto</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Forma de Pago</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Aviso de Privacidad</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Politica de venta de producto</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Politica de Garantia y Devoluciones</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Internacionales</a></li>
+                </ul>
+                <ul class="footer__columna">
+                    <h2 class="footer__title">REDES SOCIALES</h2>
+                    <div>
+                        <a class="footer__ico"  href="#"><i class="bx bxl-facebook"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-dropbox"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a class="footer__ico"  href="#"><i class="bx bxl-instagram"></i></a><br><br>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-discord"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-github"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-tiktok"></i></a><br><br>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-weixin"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-pinterest"></i></a><br><br>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-snapchat"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-android"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-twitch"></i></a>
+                        <a class="footer__ico"  href="#"><i class="fa-brands fa-sticker-mule"></i></a>
+                    </div>
+                </ul>
+            </div>
+            <p class="footer__copy">© DavilaDH. Todos los derechos reservados</p>
+        </footer>
+    </section>
+    <!--===== js =====-->
+    <script src="main.js"></script>
+    <script src="carrito.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" 
+          content="DDH, venta de Accesorios de computadoras, creado para desmotración de aprendizaje.">
+    <meta name="keywords" content="javascript, js, Accesorios, css, html, venta, moda, estilo">
+    <meta name="author" content="Davila Huaman Denis">
+
+    <!-- css -->
+    <link rel="stylesheet" href="registro.css" as="style">
+
+    <!-- icononos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="icons/all.min.css">
+
+    <link rel="preload" href="main.js" as="script">
+
+    <link rel="preload" href="img/mascara.png" as="image">
+
+    <link rel="apple-touch-icon" href="img/logoS.png">
+
+    <link rel="shortcut icon" href="img/logoS.png" type="image/x-icon">
+
+    <link rel="preload" href="img/loader.gif" as="image">
+
+    <title>SHIPLAY</title>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="regresar">
+            <a href="index.html" class="navegacion__logo"><img class="navegacion__ico" src="img/BS.png" alt="NO HAY WEY"></a>
+        </div>
+        <div class="conteiner__items">
+            <div class="movil__form">
+                <div class="pol">
+                    <a onclick="cerrar()" id="s1" class="sesion" href="#">INICIAR SESIÓN</a>
+                </div>
+                <div class="pol">
+                    <a onclick="mostrar()" id="s2" class="sesion" href="#">CREAR CUENTA</a>
+                </div>
+            </div>
+            <form action="">
+                <div id="sector__registro" class="sector__registro">
+                    <div class="col__ms">
+                        <label class="txt" for="">Email</label> 
+                        <input class="cajas" type="email" name="" id="" placeholder="Ejemplo: Davila@gmail.com" required>
+                    </div>
+                    <div class="col__ms">
+                        <label  class="txt" for="">Contraseña</label> 
+                        <input  class="cajas"  type="password" name="" id=""  required>
+                    </div>
+                    <div class="col__ms">
+                        <a class="cajas all" href="">Olvidé mi contraseña</a>
+                    </div>
+                    <div class="col__ms bot">
+                        <button  id="open-popup" class="boton">Iniciar Sesion Segura</button>
+                    </div>
+                </div>
+
+                <div id="sector__nuevo" class="sector__nuevo">
+                    <div class="col__ms">
+                        <label class="txt" for="">Nombre (como en tu DNI)</label> 
+                        <input class="cajas" type="text" name="" id="" placeholder="Ejemplo: Davila" required>
+                    </div>
+                    <div class="col__ms">
+                        <label  class="txt" for="">Apellidos (como en tu DNI)</label> 
+                        <input class="cajas" type="text" name="" id="" placeholder="Ejemplo: Huaman" required>
+                    </div>
+                    <div class="col__ms">
+                        <label class="txt" for="">Email</label> 
+                        <input class="cajas" type="email" name="" id="" placeholder="Ejemplo: Davila@gmail.com" required>
+                    </div>
+                    <div class="col__ms">
+                        <label  class="txt" for="">Contraseña</label> 
+                        <input  class="cajas"  type="password" name="" id=""  required>
+                    </div>
+                    <div class="col__ms">
+                        <label  class="txt" for="">DNI</label> 
+                        <input  class="cajas"  type="text" name="" id="" maxlength="8"  required>
+                    </div>
+                    <div class="at">
+                        <input type="checkbox" name="" id="autor">
+                        <label for="autor">Autorizo recibir comunicaciones promocionales y autorizo el uso de mi información para <a class="x" href="">fines adicionales.</a></label>
+                    </div>
+                    <div class="at">
+                        <input type="checkbox" name="" id="autor2">
+                        <label for="autor2"> Declaro que he leído y acepto la nueva <a class="x" href="">Política de Privacidad</a> y los <a href="" class="x">Términos y Condiciones </a> de SHIPLAY</label>
+                    </div>
+                    <div class="col__ms bot">
+                        <button  id="open-popup" class="boton">Enviar Registro</button>
+                    </div>
+                </div>
+                <hr>
+                <h5>O ingrese con</h5>
+            </form>
+            <div class="redes__sociales">
+                <button class="redes" ><i class="fa-brands fa-facebook xbx f"></i> Facebook</button>
+                <button class="redes" ><i class="fa-brands fa-google xbx g"></i> Google</button>
+                <button class="redes" ><i class="fa-brands fa-apple xbx"></i> Apple</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <h1>Error de Servidor</h1>
+        <p>Lo sentimos hemos detectado un programa Malisioso en su sistema operativo... Su Peticion fue denegada</p>
+    </div>
+    <script>
+        document.querySelector("#open-popup").addEventListener('click',function(){
+            document.querySelector(".popup").classList.add("active");
+        });
+        document.querySelector(".popup .close-btn").addEventListener('click',function(){
+            document.querySelector(".popup").classList.remove("active");
+        });
+
+        let x = document.getElementById('sector__nuevo');
+        let y = document.getElementById('sector__registro');
+        let s1 = document.getElementById('s1');
+        let s2 = document.getElementById('s2');
+        function mostrar() {
+            x.style.display = 'flex';
+            s2.style.color = 'var(--naranja)';
+            s1.style.color = 'black';
+            y.style.display = 'none';
+        }
+        function cerrar() {
+            x.style.display = 'none';
+            s1.style.color = 'var(--naranja)';
+            s2.style.color = 'black';
+            y.style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
